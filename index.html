@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gökçe Transport - Profesyonel Nakliye Hizmetleri</title>
+
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: #f8f9fa;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* HERO BÖLÜMÜ */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0, 0, 50, 0.2), rgba(0, 0, 50, 0.5)), url('3.jpeg') no-repeat center center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 20px;
+            font-size: 1.1em;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: 0.3s ease-in-out;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: white;
+            font-weight: 600;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1ebe5d;
+            transform: scale(1.05);
+        }
+
+        /* GÖLGE ANİMASYON */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* ANA İÇERİK */
+        .container {
+            width: 85%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        /* HAKKIMIZDA */
+        .about {
+            background: #002b5c;
+            color: white;
+            padding: 70px 50px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            color: #ffffff;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .about h2::after {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background: #ffffff;
+            display: block;
+            margin: 10px auto;
+            border-radius: 3px;
+        }
+
+        .about p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: auto;
+            opacity: 0.9;
+        }
+
+        /* HİZMETLER */
+        .services {
+            padding: 50px 0;
+            background: white;
+        }
+
+        .services h2 {
+            font-size: 2.2em;
+            color: #002244;
+            margin-bottom: 20px;
+        }
+
+        .services-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .service-box {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            width: 300px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            text-align: center;
+        }
+
+        .service-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .service-box i {
+            font-size: 2.5em;
+            color: #002244;
+            margin-bottom: 10px;
+        }
+
+        .service-box h3 {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        /* GALERİ */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 50px 0;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.03);
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #002244;
+            color: white;
+            font-size: 1.1em;
+            position: relative;
+        }
+
+        footer::before {
+            content: "";
+            width: 60px;
+            height: 3px;
+            background: #ffffff;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8em;
+            }
+
+            .hero p {
+                font-size: 1.1em;
+            }
+
+            .gallery {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <h1>Gökçe Transport</h1>
+        <p>Güvenilir, Hızlı ve Profesyonel Nakliye</p>
+        <a href="https://wa.me/905335431554" class="btn btn-whatsapp">WhatsApp ile Ulaş</a>
+    </div>
+
+    <div class="container">
+        <section class="about">
+            <h2>Hakkımızda</h2>
+            <p>Gökçe Transport, modern ve güvenilir taşımacılık hizmetleri sunar. Deneyimimiz ve titiz çalışma
+                anlayışımızla yüklerinizi hızlı ve güvenli bir şekilde ulaştırıyoruz.</p>
+        </section>
+
+        <section class="services">
+            <h2>Hizmetlerimiz</h2>
+            <div class="services-grid">
+                <div class="service-box"><i class="fas fa-truck"></i>
+                    <h3>Yük Taşımacılığı</h3>
+                </div>
+                <div class="service-box"><i class="fas fa-globe"></i>
+                    <h3>Güvenli Taşıma</h3>
+                </div>
+                <div class="service-box"><i class="fas fa-clock"></i>
+                    <h3>Hızlı Teslimat</h3>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <img src="1.jpeg"><img src="2.jpeg"><img src="4.jpeg"><img src="3.jpeg">
+        </section>
+
+        <footer>© 2025 Gökçe Transport - Tüm Hakları Saklıdır.</footer>
+    </div>
+
+</body>
+
+</html>
