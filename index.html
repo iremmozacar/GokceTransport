@@ -218,19 +218,18 @@
             border-radius: 3px;
         }
 
+
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.8em;
-            }
+    .hero {
+        background-size: cover; /* Fotoğrafın ekranı kaplamasını sağlıyor */
+        background-position: center center; /* Görüntüyü tam ortalıyor */
+        background-attachment: scroll; /* Mobilde kaydırmaya uygun hale getiriyor */
+        min-height: 100vh; /* Mobilde tam ekran kaplamasını sağlıyor */
+    }
 
-            .hero p {
-                font-size: 1.1em;
-            }
-
-            .gallery {
-                grid-template-columns: repeat(1, 1fr);
-            }
-        }
+    .hero h1 { font-size: 2.5em; } /* Mobil için başlık boyutunu küçültüyoruz */
+    .hero p { font-size: 1.1em; } /* Mobil için açıklama yazısını optimize ediyoruz */
+}
     </style>
 </head>
 
@@ -270,6 +269,7 @@
 
         <footer>© 2025 Gökçe Transport - Tüm Hakları Saklıdır.</footer>
     </div>
+xq
 
 </body>
 
